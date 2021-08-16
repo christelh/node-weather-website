@@ -10,7 +10,7 @@ form.addEventListener("click", (event)=>{
     let adress= document.querySelector("input").value;
     console.log(adress)
     
-    fetch("http://localhost:3000/weather?address="+adress)
+    fetch("/weather?address="+adress)
     .then(res=>res.json())
     .then(data=>{
         let par= document.getElementById("forecast");

@@ -6,7 +6,7 @@ const hbs = require('hbs')
 const path = require('path');
 
 const app = express();
-
+const port=process.env.port || 3000
 
 
 //paths for express config
@@ -88,4 +88,4 @@ app.get("*", (req, res) => {
 
 
 //start server
-app.listen(3000, () => console.log("listening"));
+app.listen(port, () => console.log("listening"));
