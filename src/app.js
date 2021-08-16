@@ -19,10 +19,11 @@ app.set('views', viewsPath);
 hbs.registerPartials(partialsPath);
 
 //setup static directory
+
 app.use(express.static("public"));
 
 
-app.get("", (req, res) => {
+app.get("/", (req, res) => {
     res.render("index", {
         title: 'Weather',
         name: 'christel'
@@ -74,7 +75,6 @@ app.get("/weather", (req, res) => {
         })
 });
 
-app.get("/products")
 
 
 
