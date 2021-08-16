@@ -8,7 +8,7 @@ form.addEventListener("click", (event)=>{
     event.preventDefault();
 
     let adress= document.querySelector("input").value;
-    console.log(adress)
+    
     
     fetch("/weather?address="+adress)
     .then(res=>res.json())
@@ -16,11 +16,9 @@ form.addEventListener("click", (event)=>{
         let par= document.getElementById("forecast");
 ;
         par.textContent=data.forecast
-        console.log(data)
+        
     })
         
        
 
 })
-
-// document.getElementById('error');
